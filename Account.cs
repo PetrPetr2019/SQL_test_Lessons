@@ -4,13 +4,13 @@ using System.Text;
 
 namespace PeopleStaff
 {
-    class Account
+    public class Account<T>
     {
         // Ограничение обобщений 
-        public int  Id { get; set; }
+        public T  Id { get; set; }
         public int Sum { get; set; }
 
-        public Account(int id)
+        public Account(T id)
         {
             Id = id;
         }

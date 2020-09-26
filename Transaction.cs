@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PeopleStaff
 {
-    class Transaction<T>where T:Account
+    internal class Transaction<T>where T:Account<int>
     {
         public T FromAccount { get; set; }
         public T ToAccount { get; set; }
