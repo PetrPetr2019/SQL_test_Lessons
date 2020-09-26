@@ -7,15 +7,7 @@ namespace PeopleStaff
         private static void Main(string[] args)
         {
 
-            var account1 = new Account<int>(22){ Sum = 29000};
-            var account2 = new Account<int>(33){ Sum = 8990};
-            
-            Transaction<Account<int>>transaction = new Transaction<Account<int>>
-            {
-                FromAccount = account2,
-                ToAccount = account1,
-                Sum = 98000
-            };
+          
              
             #region Анонимные типы
 
