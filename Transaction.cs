@@ -7,10 +7,11 @@ namespace PeopleStaff
 {
     internal class Transaction<T>where T:Account<int>
     {
+        //добавил функцию
         public T FromAccount { get; set; }
         public T ToAccount { get; set; }
         public int Sum { get; set; }
-
+       
         public  void Execute()
         {
             if (FromAccount.Sum > Sum)

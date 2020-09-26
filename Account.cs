@@ -9,10 +9,13 @@ namespace PeopleStaff
         // Ограничение обобщений 
         public T  Id { get; set; }
         public int Sum { get; set; }
+       
+       
 
         public Account(T id)
         {
             Id = id;
+            
         }
 
     }
