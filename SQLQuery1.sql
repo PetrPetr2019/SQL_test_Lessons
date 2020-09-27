@@ -1,0 +1,1 @@
+﻿create view  CustomerStaff   as select rating from customerses;

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace PeopleStaff
 {
@@ -412,8 +413,9 @@ namespace PeopleStaff
                 //    Console.WriteLine($"\n{VARIABLE.Номер}\n{VARIABLE.Город}");
                 //}
                 #endregion
-
-         
+                //представление которое бы показывало всех заказчиков которые имеют самые высокие оценки.
+                var Query = db.customerses.Select(t => t.rating).Max();
+                Console.WriteLine($"{Query}");
 
             }
         }
