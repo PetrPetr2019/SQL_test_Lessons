@@ -1,1 +1,1 @@
-﻿create view  CustomerStaff   as select rating from customerses;
+﻿create view SalesNumber as  select snum, sity from salespeoples;

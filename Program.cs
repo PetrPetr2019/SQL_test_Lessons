@@ -413,9 +413,21 @@ namespace PeopleStaff
                 //    Console.WriteLine($"\n{VARIABLE.Номер}\n{VARIABLE.Город}");
                 //}
                 #endregion
-                //представление которое бы показывало всех заказчиков которые имеют самые высокие оценки.
-                var Query = db.customerses.Select(t => t.rating).Max();
-                Console.WriteLine($"{Query}");
+                //Lessons №1
+                ////представление которое бы показывало всех заказчиков которые имеют самые высокие оценки.
+                //var Query = db.customerses.Select(t => t.rating).Max();
+                //Console.WriteLine($"{Query}");
+                //lessons №2
+                //представление которое бы показывало номер продавца в каждом городе.
+                var Query = db.salespeoples.Select(t => new
+                {
+                    NumberSaels = t.snum,
+                    Sity = t.sity
+                }).ToList();
+                foreach (var VARIABLE in Query)
+                {
+                    Console.WriteLine($"\nНомер продавца:{VARIABLE.NumberSaels}\nГород:{VARIABLE.Sity}"); 
+                }
 
             }
         }
